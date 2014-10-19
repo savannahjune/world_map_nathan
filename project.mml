@@ -26,8 +26,104 @@
       "geometry": "polygon",
       "Datasource": {
         "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
-        "type": "shape"
+        "type": "shape",
+        "id": "countries",
+        "project": "world_map_nathan",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       }
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.64513
+      ],
+      "id": "coastline",
+      "class": "",
+      "Datasource": {
+        "file": "layers/coastline/ne_110m_coastline.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "coastline"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999999999997,
+        -85.051,
+        180,
+        83.64513000000001
+      ],
+      "id": "countries2",
+      "class": "",
+      "Datasource": {
+        "file": "layers/countries2/ne_110m_admin_0_countries.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "countries2"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -124.95363440005697,
+        -16.536406345284952,
+        109.92980716353523,
+        66.96929759385118
+      ],
+      "id": "lakes",
+      "class": "",
+      "Datasource": {
+        "file": "layers/lakes/ne_110m_lakes.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "lakes"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.64513000000002
+      ],
+      "id": "land",
+      "class": "",
+      "Datasource": {
+        "file": "layers/land/ne_110m_land.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "land"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "ocean",
+      "class": "",
+      "Datasource": {
+        "file": "layers/ocean/ne_110m_ocean.shp",
+        "id": "ocean",
+        "project": "world_map_nathan",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ocean"
     }
   ],
   "scale": 1,
