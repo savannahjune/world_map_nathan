@@ -8,9 +8,11 @@
 @medium-blue2: #4194A5;
 @lightest-blue: #4ABFDA;
 @darkest-green: #798825;
-@medium-green:#A0B135;
+@medium-green: #A0B135;
+@lightest-green: #B1B724;
 @white: #fff;
 @desert: #D4A821;
+@mountains: #727F21;
 
 Map {
   background-color: @medium-blue2;
@@ -30,12 +32,17 @@ Map {
     line-width: 10px;
     line-join: round;
   }
-  polygon-fill: @medium-green;
+  polygon-fill: @lightest-green;
 } 
-
+ 
 #geoareas {
   [featurecla='Desert'] {
     polygon-fill: @desert;
+    }
+  [featurecla='Range/mtn'] {
+    polygon-fill: @medium-green;
+    //polygon-opacity: 2;
+    //polygon-pattern-file: url(mountains.svg); 
     }
   }
 
