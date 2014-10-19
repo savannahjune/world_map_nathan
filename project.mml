@@ -33,22 +33,25 @@
       }
     },
     {
-      "geometry": "linestring",
+      "geometry": "polygon",
       "extent": [
         -180,
         -85.051,
         180,
-        83.64513
+        84.13416168827533
       ],
-      "id": "coastline",
+      "id": "geoareas",
       "class": "",
       "Datasource": {
-        "file": "layers/coastline/ne_110m_coastline.shp"
+        "file": "layers/geoareas/ne_10m_geography_regions_polys.shp",
+        "id": "geoareas",
+        "project": "world_map_nathan",
+        "srs": ""
       },
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "coastline"
+      "name": "geoareas"
     },
     {
       "geometry": "polygon",
@@ -58,7 +61,7 @@
         180,
         83.64513000000001
       ],
-      "id": "countries2",
+      "id": "countriesoutlines",
       "class": "",
       "Datasource": {
         "file": "layers/countries2/ne_110m_admin_0_countries.shp"
@@ -66,7 +69,29 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "countries2"
+      "name": "countriesoutlines"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "ocean",
+      "class": "",
+      "Datasource": {
+        "file": "layers/ocean/ne_110m_ocean.shp",
+        "id": "ocean",
+        "project": "world_map_nathan",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ocean",
+      "status": "off"
     },
     {
       "geometry": "polygon",
@@ -79,7 +104,10 @@
       "id": "lakes",
       "class": "",
       "Datasource": {
-        "file": "layers/lakes/ne_110m_lakes.shp"
+        "file": "layers/lakes/ne_110m_lakes.shp",
+        "id": "lakes",
+        "project": "world_map_nathan",
+        "srs": ""
       },
       "srs-name": "autodetect",
       "srs": "",
@@ -107,23 +135,57 @@
     {
       "geometry": "polygon",
       "extent": [
-        -180,
+        -179.99999999999994,
         -85.051,
-        180,
-        85.051
+        179.99994876537812,
+        83.365066840336
       ],
-      "id": "ocean",
+      "id": "glaciers",
       "class": "",
       "Datasource": {
-        "file": "layers/ocean/ne_110m_ocean.shp",
-        "id": "ocean",
-        "project": "world_map_nathan",
-        "srs": ""
+        "file": "layers/glaciers/ne_110m_glaciated_areas.shp"
       },
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "ocean"
+      "name": "glaciers"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.64513
+      ],
+      "id": "coastline",
+      "class": "",
+      "Datasource": {
+        "file": "layers/coastline/ne_110m_coastline.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "coastline",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -135.3134138724495,
+        -33.99358367282875,
+        129.95602664603723,
+        72.9065062527291
+      ],
+      "id": "riverslakes",
+      "class": "",
+      "Datasource": {
+        "file": "layers/riverslakes/ne_110m_rivers_lake_centerlines.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "riverslakes"
     }
   ],
   "scale": 1,
