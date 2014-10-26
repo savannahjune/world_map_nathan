@@ -1,9 +1,9 @@
 {
   "bounds": [
     -180,
-    -85.05112877980659,
+    -85.0511,
     180,
-    85.05112877980659
+    85.0511
   ],
   "center": [
     0,
@@ -13,7 +13,7 @@
   "format": "png",
   "interactivity": false,
   "minzoom": 0,
-  "maxzoom": 22,
+  "maxzoom": 8,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss"
@@ -52,24 +52,6 @@
       "srs": "",
       "advanced": {},
       "name": "geoareas"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        -179.99999999999997,
-        -85.051,
-        180,
-        83.64513000000001
-      ],
-      "id": "countriesoutlines",
-      "class": "",
-      "Datasource": {
-        "file": "layers/countries2/ne_110m_admin_0_countries.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "countriesoutlines"
     },
     {
       "geometry": "polygon",
@@ -191,5 +173,6 @@
   "scale": 1,
   "metatile": 2,
   "name": "",
-  "description": ""
+  "description": "",
+  "attribution": ""
 }

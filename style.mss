@@ -12,7 +12,6 @@
 @lightest-green: #B1B724;
 @white: #fff;
 @desert: #D4A821;
-@mountains: #727F21;
 
 Map {
   background-color: @medium-blue2;
@@ -27,10 +26,12 @@ Map {
   }
 
 #countries {
+[zoom > 4]{
   ::outline { 
     line-color: @medium-blue;
     line-width: 10px;
     line-join: round;
+  }
   }
   polygon-fill: @lightest-green;
 } 
@@ -41,16 +42,7 @@ Map {
     }
   [featurecla='Range/mtn'] {
     polygon-fill: @medium-green;
-    //polygon-opacity: 2;
-    //polygon-pattern-file: url(mountains.svg); 
     }
-  }
-
-#countriesoutlines {
-  //polygon-fill: @medium-green;
-  line-color: @darkest-green;
-  line-width: 0.5px;
-  line-join: round;
   }
 
 #lakes {
