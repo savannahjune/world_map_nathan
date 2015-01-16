@@ -1,0 +1,115 @@
+
+/**********************************************************
+‘World Map for Nathan’s Game
+***********************************************************/
+ 
+//@darkest-blue: #30707C; 
+@darkest-blue: #00BFDA;
+@medium-blue: #4EB7C7;
+@medium-blue2: #4194A5;
+@lightest-blue2: #00C5E0;
+@lightest-blue: #4ABFDA;
+@super-light-blue: #ADFCFF;
+@darkest-green: #798825; 
+@medium-green: #A0B135;
+@lightest-green: #B1B724;
+@white: #fff;
+@desert: #D4A821;
+
+Map { 
+  background-color: @lightest-blue2; 
+}
+
+#ocean { 
+	polygon-fill:@darkest-blue;  
+} 
+
+#coastline {
+  [zoom > 4 ] {
+  	//line-color: @medium-green;
+  	line-color: @super-light-blue;
+  	//line-color: @lightest-blue;
+    line-width: 4px;
+    line-join: round;
+  } 
+  [zoom > 5 ] {
+  	//line-color: @medium-green;
+  	line-color: @super-light-blue;
+  	//line-color: @lightest-blue;
+    line-width: 6px;
+    line-join: round;
+  }
+  [zoom > 6 ] {
+  	//line-color: @medium-green;
+  	line-color: @super-light-blue;
+  	//line-color: @lightest-blue;
+    line-width: 6px;
+    line-join: round;
+  }
+  [zoom > 7 ] {
+  	//line-color: @medium-green;
+  	line-color: @super-light-blue;
+  	//line-color: @lightest-blue;
+    line-width: 4px;
+    line-join: round;
+  }
+}
+
+#countries {
+  polygon-fill: @lightest-green;
+// [zoom > 4]{
+//  ::outline { 
+//    line-color: @medium-blue;
+//    line-width: 10px;
+//    line-join: round;
+//  }
+//  }
+} 
+ 
+#geoareas {
+  [featurecla='Desert'] {
+    polygon-fill: @desert;
+    }
+  [featurecla='Range/mtn'] {
+    polygon-fill: @medium-green;
+    } 
+  }
+
+#lakes { 
+  polygon-fill: @lightest-blue;
+  line-color: @darkest-green;
+  }
+
+#riverslakes {
+  line-color: @lightest-blue;
+  line-width: 1px;
+}
+ 
+#deadsea {
+  polygon-fill: @lightest-blue;
+  line-color: @darkest-green;
+}
+
+#glaciers {
+  polygon-fill: @white;
+  //polygon-opacity: .75;
+  polygon-smooth: 1;
+  //polygon-simplify: 1;
+}
+
+
+
+#bathymetry1 {
+  polygon-opacity:1;
+  polygon-fill:@lightest-blue;
+}
+
+#bathymetry4 {
+  polygon-opacity:1;
+  polygon-fill:@darkest-blue;
+}
+
+#bathymetry5 {
+  polygon-opacity:1;
+  polygon-fill:#00BFF6;
+}

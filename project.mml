@@ -20,17 +20,25 @@
   ],
   "Layer": [
     {
-      "id": "countries",
-      "name": "countries",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.599609375
+      ],
+      "id": "countries",
+      "class": "",
       "Datasource": {
-        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
-        "type": "shape",
+        "file": "layers/countries/ne_50m_land.shp",
         "id": "countries",
         "project": "world_map_nathan",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      }
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "countries"
     },
     {
       "geometry": "polygon",
@@ -56,28 +64,6 @@
     {
       "geometry": "polygon",
       "extent": [
-        -180,
-        -85.051,
-        180,
-        85.051
-      ],
-      "id": "ocean",
-      "class": "",
-      "Datasource": {
-        "file": "layers/ocean/ne_110m_ocean.shp",
-        "id": "ocean",
-        "project": "world_map_nathan",
-        "srs": ""
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "ocean",
-      "status": "off"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
         -124.95363440005697,
         -16.536406345284952,
         109.92980716353523,
@@ -95,24 +81,6 @@
       "srs": "",
       "advanced": {},
       "name": "lakes"
-    },
-    {
-      "geometry": "polygon",
-      "extent": [
-        -180,
-        -85.051,
-        180,
-        83.64513000000002
-      ],
-      "id": "land",
-      "class": "",
-      "Datasource": {
-        "file": "layers/land/ne_110m_land.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "land"
     },
     {
       "geometry": "polygon",
@@ -135,25 +103,6 @@
     {
       "geometry": "linestring",
       "extent": [
-        -180,
-        -85.051,
-        180,
-        83.64513
-      ],
-      "id": "coastline",
-      "class": "",
-      "Datasource": {
-        "file": "layers/coastline/ne_110m_coastline.shp"
-      },
-      "srs-name": "autodetect",
-      "srs": "",
-      "advanced": {},
-      "name": "coastline",
-      "status": "off"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
         -135.3134138724495,
         -33.99358367282875,
         129.95602664603723,
@@ -168,6 +117,102 @@
       "srs": "",
       "advanced": {},
       "name": "riverslakes"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -165.898486328125,
+        -50.620019531249994,
+        176.08271484375,
+        81.94033203125
+      ],
+      "id": "deadsea",
+      "class": "",
+      "Datasource": {
+        "file": "layers/deadsea/ne_50m_lakes.shp",
+        "id": "deadsea",
+        "project": "world_map_nathan",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "deadsea"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.599609375
+      ],
+      "id": "coastline",
+      "class": "",
+      "Datasource": {
+        "file": "layers/coastline/ne_50m_coastline.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "coastline"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99999999999994,
+        -78.22869422297961,
+        179.99952233164623,
+        85.051
+      ],
+      "id": "bathymetry1",
+      "class": "",
+      "Datasource": {
+        "file": "layers/bathymetry1/ne_10m_bathymetry_J_1000.shp",
+        "id": "bathymetry1",
+        "project": "world_map_nathan",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "bathymetry1"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99998938710382,
+        -76.11980750422957,
+        180,
+        85.051
+      ],
+      "id": "bathymetry4",
+      "class": "",
+      "Datasource": {
+        "file": "layers/bathymetry4/ne_10m_bathymetry_G_4000.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "bathymetry4"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99998938710382,
+        -69.91619422297953,
+        180,
+        81.89032623905655
+      ],
+      "id": "bathymetry5",
+      "class": "",
+      "Datasource": {
+        "file": "layers/bathymetry5/ne_10m_bathymetry_F_5000.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "bathymetry5"
     }
   ],
   "scale": 1,

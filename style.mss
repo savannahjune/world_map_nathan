@@ -1,61 +1,101 @@
 
 /**********************************************************
-‘World Map for Nathan’s Game
+‘World Map for Nathan’s Game in Old Style
 ***********************************************************/
-
-@darkest-blue: #30707C; 
-@medium-blue: #4EB7C7;
-@medium-blue2: #4194A5;
-@lightest-blue: #4ABFDA;
-@darkest-green: #798825;
-@medium-green: #A0B135;
-@lightest-green: #B1B724;
+ 
+@land-brown: #BAA25F;
 @white: #fff;
-@desert: #D4A821;
+@coastal-glow: #658970;
+@water: #e6d9b8;
+@bathymetry1: #367;
+@lakes: #7AA1A1;
 
-Map {
-  background-color: @medium-blue2;
+Map { 
+  background-color: @water;
 }
 
-#ocean {
-	polygon-fill:@darkest-blue;  
-}
-#coastline {
-  line-color:@lightest-blue;
-  line-width: 4px;
+#coastline [zoom > 4] {
+  ::outline1, ::outline2, ::outline3 {
+    line-color: @coastal-glow;
+    line-width: 2;
+    line-join: round;
+    line-opacity: 0.5;
+    line-comp-op: multiply;
   }
+  ::outline1 { line-smooth: 4; }
+  ::outline2 { line-smooth: 8; }
+  ::outline3 { line-smooth: 16; }
+}
 
 #countries {
-[zoom > 4]{
-  ::outline { 
-    line-color: @medium-blue;
-    line-width: 10px;
-    line-join: round;
-  }
-  }
-  polygon-fill: @lightest-green;
+  polygon-fill: lighten(@land-brown,10);
+  polygon-opacity: 0.6;
 } 
  
 #geoareas {
-  [featurecla='Desert'] {
-    polygon-fill: @desert;
-    }
+  //[featurecla='Desert'] {
+  //  polygon-fill: @white;
+  //  }
   [featurecla='Range/mtn'] {
-    polygon-fill: @medium-green;
-    }
+    polygon-fill: darken(@land-brown, 2);
+    polygon-opacity: 0.25;
+    } 
   }
 
-#lakes {
-  polygon-fill: @lightest-blue;
-  line-color: @darkest-green;
+#lakes { 
+  polygon-fill: lighten(@coastal-glow, 10);
+  ::outline1, ::outline2, ::outline3 {
+    line-color: lighten(@coastal-glow, 10);
+    line-width: 2;
+    line-join: round;
+    line-opacity: 0.5;
+    line-comp-op: multiply;
   }
-
-#riverslakes {
-  line-color: @medium-blue;
-  line-width: 1px;
+  ::outline1 { line-smooth: 1; }
+  ::outline2 { line-smooth: 2; }
+  ::outline3 { line-smooth: 3; }
 }
 
 
+#riverslakes [zoom > 2] {
+  line-color: @coastal-glow;
+  line-width: 2px;
+}
+ 
+#deadsea { 
+  polygon-fill: @coastal-glow;
+  ::outline1, ::outline2, ::outline3 {
+    line-color: lighten(@coastal-glow, 10);
+    line-width: 2;
+    line-join: round;
+    line-opacity: 0.5;
+    line-comp-op: multiply;
+  }
+  ::outline1 { line-smooth: 1; }
+  ::outline2 { line-smooth: 2; }
+  ::outline3 { line-smooth: 3; }
+}
+
 #glaciers {
   polygon-fill: @white;
-  }
+  polygon-opacity: .75;
+  polygon-smooth: 1;
+}
+
+#bathymetry1 {
+  polygon-fill: @bathymetry1;
+  polygon-opacity: 0.05;
+  polygon-comp-op: color-burn;
+}
+
+#bathymetry4 {
+  polygon-fill: darken(@coastal-glow, 20);
+  polygon-opacity: 0.09;
+  polygon-comp-op: color-burn;
+}
+
+#bathymetry5 {
+  polygon-fill: darken(@bathymetry1, 40);
+  polygon-opacity: 0.05;
+  polygon-comp-op: color-burn;
+}
