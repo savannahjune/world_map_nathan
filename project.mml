@@ -213,6 +213,24 @@
       "srs": "",
       "advanced": {},
       "name": "bathymetry5"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -173.948355,
+        39.598653,
+        -173.948355,
+        39.598653
+      ],
+      "id": "ship",
+      "class": "",
+      "Datasource": {
+        "file": "layers/ship/ship - Sheet1.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ship"
     }
   ],
   "scale": 1,
